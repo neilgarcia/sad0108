@@ -17,6 +17,10 @@
                   		$('#status').text('Login successful!');
                   		$('#status').fadeIn(500);
                   		$('#status').delay(1000).fadeOut(500);
+                      setTimeout(function () {
+                         window.location.replace('http://localhost/sad0108/html/default/home.php');
+                      }, 2000);
+                      
                   	}else{
                   		$('#status').css('color','red');
                   		$('#status').text('Invalid Login!');

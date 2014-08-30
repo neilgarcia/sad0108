@@ -18,7 +18,7 @@
 					session_start();
 					$_SESSION['activeclient'] = $email;
 						echo "1";
-						
+					//header("Location: http://localhost/sad0108/html/default/home.php");
 					
 				}	
 				
@@ -26,7 +26,7 @@
 					session_start();
 					$_SESSION['activeadmin'] = $email;
 						echo "1";
-						
+					//header("Location: http://localhost/sad0108/html/default/home.php");
 					
 				}
 				}
