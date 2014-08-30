@@ -14,7 +14,7 @@
 
 			if ($result > 0){
 				while ($res = $stmt->fetch(PDO::FETCH_ASSOC)){
-					if ($res['privilage'] == "client"){
+					if ($res['privilage'] === "client"){
 					session_start();
 					$_SESSION['activeclient'] = $email;
 						echo "1";
@@ -22,10 +22,10 @@
 					
 				}	
 				
-				else if ($res['privilage'] == "admin") {
+				else if ($res['privilage'] === "admin") {
 					session_start();
 					$_SESSION['activeadmin'] = $email;
-						echo "1";
+						echo "3";
 					//header("Location: http://localhost/sad0108/html/default/home.php");
 					
 				}

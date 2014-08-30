@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/addShirts.js"></script>
+	<!--<script type="text/javascript" src="js/addShirts.js"></script>-->
 	<!--[if lt IE 9]>
 		<script src="js/modernizr.custom.js"></script>
 	<![endif]-->
@@ -33,10 +33,10 @@
 					<section class="cnus">
 					
 					
-				<form  enctype="multipart/form-data">
+				<form action="php/addShirts.php" method="post"  enctype="multipart/form-data">
 					<input type="file" name="attachment"><br>
 					<label for="prodId">Product Id:</label>
-					<input type="text" disabled name="prodId" value="<?php echo rand(10000, 99999); ?>"><br>
+					<input type="text" readonly name="prodId" value="<?php echo rand(10000, 99999); ?>"><br>
 					<label for="prodName">Product Name:</label>
 					<input type="text" name="prodName"><br>
 					<label for="prodType">Product Type:</label>

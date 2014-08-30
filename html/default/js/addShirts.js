@@ -11,7 +11,13 @@ $(document).ready(function(){
                   type: "POST",
                   url: "PHP/addShirts.php",
                   data: data,
+                  
                   success: function(data) {
+                    if(data==2){
+                      alert(data);
+                    }else{
+                     alert(data);
+                    }
                     
                   },
                   error: function(xhr, status, error) {

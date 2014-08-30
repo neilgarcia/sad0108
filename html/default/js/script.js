@@ -12,6 +12,7 @@
                   url: "PHP/signin.php",
                   data: data,
                   success: function(data) {
+                    alert(data);
                   	if(data==1){
                   		$('#status').css('color','black');
                   		$('#status').text('Login successful!');
@@ -21,7 +22,17 @@
                          window.location.replace('http://localhost/sad0108/html/default/home.php');
                       }, 2000);
                       
-                  	}else{
+                  	}else if(data==3){
+
+                      $('#status').css('color','black');
+                      $('#status').text('Login successful!');
+                      $('#status').fadeIn(500);
+                      $('#status').delay(1000).fadeOut(500);
+                      setTimeout(function () {
+                         window.location.replace('http://localhost/sad0108/html/default/admin.php');
+                      }, 2000);
+
+                    }else{
                   		$('#status').css('color','red');
                   		$('#status').text('Invalid Login!');
                   		$('#status').fadeIn(500);
