@@ -3,10 +3,23 @@
 					<h1 id="logo"><a href="home.php">SG</a></h1>
 					<!-- search -->
 					<div class="search">
-						<form method="post">
-							<span class="field"><input type="text" class="field" value="keywords here ..." title="keywords here ..." /></span>
-							<input type="submit" class="search-btn" value="" />
-						</form>
+						
+							<span class="field">
+								<?php
+
+									session_start();
+									if(isset($_SESSION['activeclient'])){
+										echo "Welcome back " , $_SESSION['activeclient'] , "!";
+									}else if(isset($_SESSION['activeadmin'])){
+										echo "Welcome back " , $_SESSION['activeadmin'] , "!";
+									}else{
+										echo "Please Login!";
+									}
+
+								?>
+							</span>
+							
+						
 					</div>
 					<!-- end of search -->
 				</header>
@@ -24,7 +37,14 @@
 						<li><a href="sportsfolio.php">SPORTSFOLIO</a></li>
 						<li><a href="#">ONLINE SERVICES</a></li>
 						<li><a href="contactus.php">CONTACT US</a></li>
-						<li><a href="login.php">LOG IN</a></li>
+						<?php
+
+						if(isset($_SESSION['activeadmin']) || isset($_SESSION['activeclient']))
+							echo '<li><a href="PHP/signout.php">LOG OUT</a></li>';
+						else
+							echo '<li><a href="login.php">LOG IN</a></li>';
+						?>
+						
 					</ul>
 				</nav>
 				<!-- end of navigation -->
