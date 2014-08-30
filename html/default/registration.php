@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 	<!--[if lt IE 9]>
 		<script src="js/modernizr.custom.js"></script>
 	<![endif]-->
@@ -27,28 +28,41 @@
 				<?php include_once	'header.php' ?>
 				
 				<div class="registration">
-				<form name = "reg" action = "#">
+				<form id="reg">
 				
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				
 					<center>
-				
-					<p>First Name: <input type = "text" name = "txtFirstname" maxlength = 10></p>
-					<p>Last Name: <input type = "password" name = "txtLastname" maxlength = 10></p>
-					<p>Address: <input type = "text" name = "txtAdd" maxlength = 10></p>
-					<p>User name: <input type = "text" name = "txtUsername" maxlength = 10></p>
-					<p>Password: <input type = "password" name = "txtPassword" maxlength = 10></p>
-					<p>Confirm Password: <input type = "password" maxlength = 10></p>
-					<p>Contact Number: <input type = "text" name = "txtCont" maxlength = 10></p>
-					<p>Email Address: <input type = "textbox" name = "txtEmail" maxlength = 10></p>
+					<h1 id='signupmessage'>Sign Up Now!</h1>
+					<h4 class='margbot'>Be a member of the stargame community!</h4>
+					<div>&nbsp;<span id="signupResult"></span></div>
+					<p>
+					<input type = "text" name = "txtFirstname" maxlength = 10 class="txtLogin" placeholder="First Name">
+					<input type = "text" name = "txtLastname" maxlength = 10 class="txtLogin" placeholder="Last Name">
+					</p>
+					
+					<p>
+					<input type = "text" name = "txtUsername" placeholder="Username" maxlength = 10 class="txtLogin">
+					<input type = "text" name = "txtCont" maxlength = 11 placeholder="Contact Number" class="txtLogin">
+					</p>
+					<p>
+					<input type = "password" name = "txtPassword" placeholder="Password" maxlength = 10 class="txtLogin">
+					<input type = "password" name = "rePass" maxlength = 10 placeholder="Re Enter Password" class="txtLogin">
+					</p>
+					<p>
+					<input type = "text" name = "txtAdd" maxlength = 10 placeholder="Address" class='long txtLogin'>
+					</p>
+					<p>
+					<input type = "textbox" name = "txtEmail" maxlength = 10 placeholder="Email Address" class='long txtLogin'>
+					</p>
 					
 			
 					
-					<p><input type = "submit" class="button" name = "cmdSubmit"></p>
+					<p><input type = "button" id="button" class="margbot" name = "cmdSubmit" value="SignUp"></p>
 					
 					
 					</center>
 					
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
 				</form>
 				</div>
 				
@@ -111,21 +125,7 @@
 						<div class="cl">&nbsp;</div>
 					</div>
 					<!-- end of footer-cols -->
-					<div class="footer-bottom">
-						<nav class="footer-nav">
-							<ul>
-								<li class="active"><a href="home.html">HOME</a></li>
-								<li><a href="aboutus.html">ABOUT US</a></li>
-								<li><a href="faqs.html">FAQ's</a></li>
-								<li><a href="sportsfolio.html">SPORTSFOLIO</a></li>
-								<li><a href="online.html">ONLINE SERVICES</a></li>
-								<li><a href="contactus.html">CONTACT US</a></li>
-								<li><a href="login.html">LOG IN</a></li>
-							</ul>
-						</nav>
-						<p class="copy">&copy; Copyright 2014 Stargame Sportswear<span>|</span> <strong>Powered by <a href="sad0108.html" target="_blank">SAD0108</a></strong></p>
-						<div class="cl">&nbsp;</div>
-					</div>
+					<?php include_once 'footer.php'; ?>
 				</div>
 			</div>
 			<!-- end of container -->	

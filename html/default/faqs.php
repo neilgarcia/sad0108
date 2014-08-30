@@ -84,21 +84,7 @@
 						<div class="cl">&nbsp;</div>
 					</div>
 					<!-- end of footer-cols -->
-					<div class="footer-bottom">
-						<nav class="footer-nav">
-							<ul>
-								<li class="active"><a href="home.html">HOME</a></li>
-								<li><a href="aboutus.html">ABOUT US</a></li>
-								<li><a href="faqs.html">FAQ's</a></li>
-								<li><a href="sportsfolio.html">SPORTSFOLIO</a></li>
-								<li><a href="online.html">ONLINE SERVICES</a></li>
-								<li><a href="contactus.html">CONTACT US</a></li>
-								<li><a href="login.html">LOG IN</a></li>
-							</ul>
-						</nav>
-						<p class="copy">&copy; Copyright 2014 Stargame Sportswear<span>|</span> <strong>Powered by <a href="sad0108.html" target="_blank">SAD0108</a></strong></p>
-						<div class="cl">&nbsp;</div>
-					</div>
+					<?php include_once 'footer.php'; ?>
 				</div>
 			</div>
 			<!-- end of container -->	

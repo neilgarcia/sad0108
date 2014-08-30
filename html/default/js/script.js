@@ -37,4 +37,39 @@
                 });
                 
             });
+
+      $('#button').click(function(){
+        event.preventDefault();
+        
+        data = $('#reg').serialize();
+        $.ajax({
+          type: "POST",
+          url: "PHP/register.php",
+          data: data,
+          success: function(result){
+            
+              if(result==1){
+                $('#signupResult').text('Username Already Exist!');
+                $('#signupResult').css('color','red');
+              }else if(result==3){
+                $('#signupResult').text('Please complete all fields!');
+                $('#signupResult').css('color','red');
+              }else if(result==4){
+                $('#signupResult').text('Password does not match!');
+                $('#signupResult').css('color','red');
+              }else{
+                $('#signupResult').text('Registration Successful!');
+                $('#signupResult').css('color','#828282');
+                setTimeout(function () {
+                  window.location.replace('http://localhost/sad0108/html/default/registration.php');
+                }, 2000);
+
+              }
+              $('#signupResult').fadeIn(500);
+              $('#signupResult').delay(1000).fadeOut(500);
+          }
+        });
+        
+    });
+
 	});

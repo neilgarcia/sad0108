@@ -320,3 +320,51 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 
 	#logo a { background: url(images/logo@2x.png) no-repeat 0 0; -webkit-background-size: 81px 33px; -moz-background-size: 81px 33px; background-size: 81px 33px;  }
 }
+
+#signupmessage{
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+.margbot{
+	margin-bottom: 40px;
+}
+
+.txtLogin{
+	font-size: 15px;
+	padding: 5px;
+	border-radius: 4px;
+	font-family: segoe ui;
+	border-style: solid;
+	border-color: #828282;
+	margin: 10px 5px 10px 5px;
+	z-index: 100;
+	outline: none;
+
+}
+
+.long{
+	width: 388px;
+}
+
+#button{
+	font-size: 25px;
+	margin-top: 10px;
+	width: 194px;
+	padding: 5px;
+	border-radius: 3px;
+	border-style: solid;
+	color: white;
+	background: -webkit-linear-gradient(#67ae55, #578843);
+	-webkit-box-shadow: inset 0 1px 1px #a4e388;
+	border-color: #3b6e22 #3b6e22 #2c5115;
+	cursor: pointer;
+}
+
+#signupResult{
+	display: none;
+	-webkit-margin-before: 1.33em;
+	-webkit-margin-after: 1.33em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+}
