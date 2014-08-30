@@ -9,7 +9,7 @@ Welcome,
 <br>
 <h2><strong>Admin Page</strong></h2>
 <br>
-<a href="#" id="btnAdd" class="sidemargin button">Add</a>
+<a href="prodAdd.php" id="btnAdd" class="sidemargin button">Add</a>
 <a href="#" id="btnEdit"  class="sidemargin button">Edit</a>
 <a href="#" id="btnDelete"  class="sidemargin button">Delete</a>
 <br><br>

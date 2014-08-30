@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/addShirts.js"></script>
 	<!--[if lt IE 9]>
 		<script src="js/modernizr.custom.js"></script>
 	<![endif]-->
@@ -32,10 +33,10 @@
 					<section class="cnus">
 					
 					
-					<form>
-					<input type="file" value="attachment"><br>
+				<form  enctype="multipart/form-data">
+					<input type="file" name="attachment"><br>
 					<label for="prodId">Product Id:</label>
-					<input type="text" name="prodId"><br>
+					<input type="text" disabled name="prodId" value="<?php echo rand(10000, 99999); ?>"><br>
 					<label for="prodName">Product Name:</label>
 					<input type="text" name="prodName"><br>
 					<label for="prodType">Product Type:</label>
@@ -75,22 +76,22 @@
 					<br><br><br>
 					<label for="sizes">Available Sizes:</label>
 					<div class="block">
-					<input type="radio" name="sizes" value="XS">XS&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="L">L&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="3XL">3XL<br>
-					<input type="radio" name="sizes" value="S">S&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="XL">XL&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="4XL">4XL<br>
-					<input type="radio" name="sizes" value="M">M&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="2XL">2XL&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="sizes" value="5XL">5XL<br><br>
+					<input type="checkbox" name="sizes[]" value="XS">XS&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="L">L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="3XL">3XL<br>
+					<input type="checkbox" name="sizes[]" value="S">S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="XL">XL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="4XL">4XL<br>
+					<input type="checkbox" name="sizes[]" value="M">M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="2XL">2XL&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" name="sizes[]" value="5XL">5XL<br><br>
 					</div>
 					<br>
 					<label for="price">Price:</label>
 					<input type="text" name="price">
 					<br><br>
 					<input type="submit" value="Add Product">
-					</form>
+				</form>
 					
 					
 					</section>
