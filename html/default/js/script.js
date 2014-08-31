@@ -12,14 +12,13 @@
                   url: "PHP/signin.php",
                   data: data,
                   success: function(data) {
-                    alert(data);
                   	if(data==1){
                   		$('#status').css('color','black');
                   		$('#status').text('Login successful!');
                   		$('#status').fadeIn(500);
                   		$('#status').delay(1000).fadeOut(500);
                       setTimeout(function () {
-                         window.location.replace('http://localhost/sad0108/html/default/home.php');
+                         window.location.replace('http://localhost/sad0108/html/default/index.php');
                       }, 2000);
                       
                   	}else if(data==3){
@@ -29,7 +28,7 @@
                       $('#status').fadeIn(500);
                       $('#status').delay(1000).fadeOut(500);
                       setTimeout(function () {
-                         window.location.replace('http://localhost/sad0108/html/default/admin.php');
+                         window.location.replace('http://localhost/sad0108/html/default/index.php?action=admin');
                       }, 2000);
 
                     }else{
@@ -50,6 +49,7 @@
             });
 
       $('#button').click(function(){
+
         event.preventDefault();
         
         data = $('#reg').serialize();
@@ -72,7 +72,7 @@
                 $('#signupResult').text('Registration Successful!');
                 $('#signupResult').css('color','#828282');
                 setTimeout(function () {
-                  window.location.replace('http://localhost/sad0108/html/default/registration.php');
+                  window.location.replace('http://localhost/sad0108/html/default/index.php');
                 }, 2000);
 
               }

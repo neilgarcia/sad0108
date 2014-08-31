@@ -22,6 +22,8 @@
 			if($pass==$repass){
 				$stmt = $dbc->prepare("INSERT INTO users(username,password,first_name,last_name,email,contact_num,address,privilage) VALUES(:user, :pass, :fname, :lname, :email, :cnum, :add, :client)");
 				$stmt->execute(array(':user'=>$username, ':pass'=>$pass, ':fname'=>$fname, ':lname'=>$lname, ':email'=>$email, ':cnum'=>$cont, ':add'=>$add, ':client'=>'client'));
+				session_start();
+				$_SESSION['activeclient'] = $username;
 				echo 2;
 			}else{
 				echo 4;

@@ -28,15 +28,15 @@
 				<nav id="navigation">
 					<a href="#" class="nav-btn">HOME<span class="arr"></span></a>
 					<ul>
-						<li class="active"><a href="home.php">HOME</a></li>
-						<li><a href="aboutus.php">ABOUT US</a>
+						<li class="active"><a href="?action=home">HOME</a></li>
+						<li><a href="?action=aboutus">ABOUT US</a>
 							
 							
 							
-						<li><a href="faqs.php">FAQ's</a></li>
-						<li><a href="sportsfolio.php">SPORTSFOLIO</a></li>
+						<li><a href="?action=faqs">FAQ's</a></li>
+						<li><a href="?action=sportsfolio">SPORTSFOLIO</a></li>
 						<li><a href="#">ONLINE SERVICES</a></li>
-						<li><a href="contactus.php">CONTACT US</a></li>
+						<li><a href="?action=contactus">CONTACT US</a></li>
 						<?php
 
 						if(isset($_SESSION['activeadmin']) || isset($_SESSION['activeclient']))

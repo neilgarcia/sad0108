@@ -390,3 +390,6 @@ label{
 	width: 100px;
 	text-align: left;
 }
+#tblProducts{
+	table-layout: fixed;
+}

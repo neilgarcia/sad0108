@@ -5,7 +5,7 @@
 					<?php
 					
 					if(isset($_SESSION['activeadmin'])){
-						include_once 'PHP/adminpage.php';
+						include_once 'prodAdd.php';
 					}else{
 						echo '<br><br><br><br><br><br><br>
 						
@@ -20,4 +20,4 @@
 					</section>
 					
 
-</div>
+				</div>
