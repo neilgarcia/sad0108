@@ -92,7 +92,7 @@
 	 
 
 ?>
-					<form action="http://localhost/sad0108/html/default/index.php?action=productAdd" method="post"  enctype="multipart/form-data">
+					<form method="post"  enctype="multipart/form-data">
 					<input type="file" name="attachment"><br>
 					<label for="prodId">Product Id:</label>
 					<input type="text" readonly name="prodId" value="<?php 
@@ -122,7 +122,7 @@
 					<label for="color">Color:</label>
 					<input type="text" name="color" value="<?php if(isset($color)){echo $color;}?>">
 					<label for="specification">Specification:</label>
-					<input type="text" name="specification" value="<?php if(isset($reversible)){echo $reversible;}?>"><br>
+					<input type="text" name="specification" value="<?php if(isset($specification)){echo $specification;}?>"><br>
 					<label for="reversible">Reversible:</label>
 					<div class="block">
 					<input type="radio" name="reversible" value="Yes" <?php if(isset($_POST['reversible']) && $_POST['reversible']=='Yes'){ echo ' checked="checked"'; } ?>>Yes<br>
