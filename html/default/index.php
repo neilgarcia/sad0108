@@ -11,7 +11,7 @@
 	
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 	<?php
-	if($_GET['action']<>'productAdd')
+	if(!isset($_GET['action']) || $_GET['action']<>'productAdd')
 		echo '<script type="text/javascript" src="js/script.js"></script>';
 	?>
 	
