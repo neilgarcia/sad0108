@@ -92,7 +92,7 @@
 	 
 
 ?>
-					<form method="post"  enctype="multipart/form-data">
+					<form action="index.php?action=productAdd" method="post" enctype="multipart/form-data">
 					<input type="file" name="attachment"><br>
 					<label for="prodId">Product Id:</label>
 					<input type="text" readonly name="prodId" value="<?php 
