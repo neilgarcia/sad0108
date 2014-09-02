@@ -62,10 +62,9 @@
 						<div class="col">
 							<h2>Services</h2>
 							<ul>
-								<li><a href="#"><strong>Customized Orders</strong></a></li>
-								<li><a href="#"><strong>Customer Profiling</strong></a></li>
+								<li><a href="#"><strong>Pay Online</strong></a></li>
+								<li><a href="#"><strong>Customize Orders</strong></a></li>
 								<li><a href="#"><strong>Order Pre-designs</strong></a></li>
-								<li><a href="#"><strong>Order Ready-to-Wear</strong></a></li>
 							</ul>
 						</div>
 						<div class="col">
@@ -80,8 +79,7 @@
 						<div class="col">
 							<h2>Sizing</h2>
 							<ul>
-								<li><a href="#"><strong>Local Size Chart</strong></a></li>
-								<li><a href="#"><strong>International Size Chart</strong></a></li>
+								<li><a href="#"><strong>Size Chart</strong></a></li>
 								<li><a href="#"><strong>Sample Jersey w/ Sizes</strong></a></li>
 								<li><a href="#"><strong>Ways to get your own size</strong></a></li>
 							</ul>

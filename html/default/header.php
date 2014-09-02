@@ -13,7 +13,7 @@
 									}else if(isset($_SESSION['activeadmin'])){
 										echo "Welcome back " , $_SESSION['activeadmin'] , "!";
 									}else{
-										echo "Please Login!";
+										echo "PLEASE LOG IN";
 									}
 
 								?>

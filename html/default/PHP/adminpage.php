@@ -7,7 +7,7 @@ Welcome,
 ?>
 </strong></h2>
 <br>
-<h2><strong>Admin Page</strong></h2>
+<h2><strong>ADMIN PAGE</strong></h2>
 <br>
 <a href="?action=productAdd" id="btnAdd" class="sidemargin button">Add</a>
 <a href="#" id="btnEdit"  class="sidemargin button">Edit</a>

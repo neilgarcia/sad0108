@@ -14,21 +14,28 @@
 
 			if ($result > 0){
 				while ($res = $stmt->fetch(PDO::FETCH_ASSOC)){
-					if ($res['privilage'] === "client"){
-					session_start();
-					$_SESSION['activeclient'] = $email;
-						echo "1";
-					//header("Location: http://localhost/sad0108/html/default/home.php");
+					if($pass==$res['password']){
+
+						if ($res['privilage'] === "client"){
+							session_start();
+							$_SESSION['activeclient'] = $email;
+								echo "1";
+							//header("Location: http://localhost/sad0108/html/default/home.php");
+							
+						}	
+						
+						else if ($res['privilage'] === "admin") {
+							session_start();
+							$_SESSION['activeadmin'] = $email;
+								echo "3";
+							//header("Location: http://localhost/sad0108/html/default/home.php");
+							
+						}
+
+					}else{
+						echo "2";
+					}
 					
-				}	
-				
-				else if ($res['privilage'] === "admin") {
-					session_start();
-					$_SESSION['activeadmin'] = $email;
-						echo "3";
-					//header("Location: http://localhost/sad0108/html/default/home.php");
-					
-				}
 				}
 			
 				

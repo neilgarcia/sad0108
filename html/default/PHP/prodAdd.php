@@ -92,7 +92,7 @@
 	 
 
 ?>
-					<form action="http://localhost/sad0108/html/default/index.php?action=productAdd" method="post"  enctype="multipart/form-data">
+				
 					<input type="file" name="attachment"><br>
 					<label for="prodId">Product Id:</label>
 					<input type="text" readonly name="prodId" value="<?php 
