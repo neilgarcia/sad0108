@@ -393,3 +393,9 @@ label{
 #tblProducts{
 	table-layout: fixed;
 }
+
+.fancybox img{
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}

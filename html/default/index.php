@@ -4,12 +4,15 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 	<title>Stargame Sportswear</title>
+	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
 	
-	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+	
 	<?php
 	if(!isset($_GET['action']) || $_GET['action']<>'productAdd')
 		echo '<script type="text/javascript" src="js/script.js"></script>';
