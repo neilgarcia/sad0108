@@ -23,7 +23,8 @@
 
 	} else{
 		    //file selected
-	 	$ext = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
+	 	$imgFile = file_get_contents($_FILES['attachment']['tmp_name']);
+	 	$imgType = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
 	 	$selected = true;
 	}
 	 
@@ -32,7 +33,10 @@
 	 include_once	'db.php';
 
 	 if(!empty($prodId) && !empty($prodName) && !empty($prodType) && !empty($designName) && !empty($textile) && !empty($color) && !empty($specification) && !empty($reversible) && !empty($type) && !empty($font) && !empty($sizes) &&  !empty($price) && $selected){
-	 	$stmt = $dbc->prepare("INSERT INTO products VALUES(
+	 		
+	 	try {
+		    
+		    $stmt = $dbc->prepare("INSERT INTO products VALUES(
 	 		:prodId,
 	 		:prodName,
 	 		:prodType,
@@ -44,7 +48,9 @@
 	 		:type,
 	 		:font,
 	 		:sizes,
-	 		:price
+	 		:price,
+	 		:img,
+	 		:imgType
 	 	)");
 	 	$stmt->execute(array(
 	 		':prodId'=>$prodId,
@@ -58,11 +64,18 @@
 	 		':type'=>$type,
 	 		':font'=>$font,
 	 		':sizes'=>$sizes,
-	 		':price'=>$price
+	 		':price'=>$price,
+	 		':img'=>$imgFile,
+	 		'imgType'=>$imgType
 	 	));
-	 	$filename = $prodName . "." . $ext;
-		 $target = 'css/shirts/' . $filename;
-		 move_uploaded_file( $_FILES['attachment']['tmp_name'], $target);
+		}
+		catch(Exception $e) {
+		    echo 'Exception -> ';
+		    var_dump($e->getMessage());
+		}
+
+	 	
+		 
 		 $res = "Product Successfully Added!";
 		 $prodId = '';
 		 $prodName = '';

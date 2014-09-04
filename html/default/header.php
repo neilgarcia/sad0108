@@ -5,22 +5,58 @@
 					<div class="search">
 						
 							<span class="field">
+								<div class="click-nav">
+								  <ul class="no-js">
+								    <li>
+								      <a href="#" class="clicker"><img src="css/images/i-1.png" alt="Icon">
+
+								      <?php
+
+								      	session_start();
+										if(isset($_SESSION['activeclient'])){
+											echo $_SESSION['activeclient'];
+										}else if(isset($_SESSION['activeadmin'])){
+											echo $_SESSION['activeadmin'];
+										}else{
+											echo "User";
+										}
+
+								      ?>
+
+								      </a>
+								      <?php 
+
+								        if(isset($_SESSION['activeclient'])){
+											echo '<ul>
+										        <li><a href="php/signout.php"><img src="css/images/i-6.png" alt="Icon">Sign out</a></li>
+										      </ul>';
+										}else if(isset($_SESSION['activeadmin'])){
+											echo '<ul>
+										        <li><a href="?action=admin"><img src="css/images/i-3.png" alt="Icon">Admin</a></li>
+										        <li><a href="php/signout.php"><img src="css/images/i-6.png" alt="Icon">Sign out</a></li>
+										      </ul>';
+											
+										}else{
+											echo '<ul>
+										        <li><a href="login.php"><img src="css/images/i-5.png" alt="Icon">Login</a></li>
+										      </ul>';
+										}
+
+								      	
+								      ?>
+								      
+								    </li>
+								  </ul>
+								</div>
 								<?php
 
-									session_start();
-									if(isset($_SESSION['activeclient'])){
-										echo "Welcome back " , $_SESSION['activeclient'] , "!";
-									}else if(isset($_SESSION['activeadmin'])){
-										echo "Welcome back " , $_SESSION['activeadmin'] , "!";
-									}else{
-										echo "PLEASE LOG IN";
-									}
+									
 
 								?>
 							</span>
-							
+					</div>		
 						
-					</div>
+					
 					<!-- end of search -->
 				</header>
 				<!-- end of header -->
@@ -37,13 +73,9 @@
 						<li><a href="?action=sportsfolio">SPORTSFOLIO</a></li>
 						<li><a href="#">ONLINE SERVICES</a></li>
 						<li><a href="?action=contactus">CONTACT US</a></li>
-						<?php
+						<li><a href="?action=contactus">GALLERY</a></li>
+						
 
-						if(isset($_SESSION['activeadmin']) || isset($_SESSION['activeclient']))
-							echo '<li><a href="PHP/signout.php">LOG OUT</a></li>';
-						else
-							echo '<li><a href="login.php">LOG IN</a></li>';
-						?>
 						
 					</ul>
 				</nav>

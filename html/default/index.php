@@ -14,7 +14,7 @@
 	
 	
 	<?php
-	if(!isset($_GET['action']) || $_GET['action']<>'productAdd')
+	if(!isset($_GET['action']) || ($_GET['action']<>'productAdd' && $_GET['action']<>'edit'))
 		echo '<script type="text/javascript" src="js/script.js"></script>';
 	?>
 	
