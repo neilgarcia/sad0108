@@ -23,9 +23,12 @@
 
 	} else{
 		    //file selected
-	 	$imgFile = file_get_contents($_FILES['attachment']['tmp_name']);
-	 	$imgType = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
-	 	$selected = true;
+		if(file_exists($_FILES['attachment']['tmp_name'])){
+			$imgFile = file_get_contents($_FILES['attachment']['tmp_name']);
+	 		$imgType = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
+	 		$selected = true;
+		}
+	 	
 	}
 	 
 	

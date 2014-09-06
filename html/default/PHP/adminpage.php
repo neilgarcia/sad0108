@@ -4,17 +4,14 @@ Welcome,
 <?php 
 	
 	echo $_SESSION['activeadmin'], "!";
-	if(isset($_GET['prodId']) && isset($_GET['imgType'])){
+	if(isset($_GET['prodId']) && isset($_GET['imgType']) && isset($_SESSION['activeadmin'])){
 
 		$prodId = $_GET['prodId'];
 		$type = $_GET['imgType'];
 		include_once 'db.php';
 		$stmt = $dbc->prepare("DELETE FROM products WHERE prod_id = :prodId");
-		$stmt->execute(array(':prodId'=>$prodId));
-		if(file_exists("./css/shirts/$prodId.$type")){
-			unlink("./css/shirts/$prodId.$type");
-		}
-		
+
+
 
 	}
 

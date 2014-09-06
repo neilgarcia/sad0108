@@ -86,4 +86,17 @@
     });
     $(".fancybox").fancybox();
 
+    $('.link').on('click', function(){
+      var id = this.id;
+      $.fancybox({
+          width: 300,
+          height: 270,
+          padding: 30,
+          autoSize: false,
+          href: 'php/order.php?id=' + id,
+          type: 'ajax'
+      });
+  });
+
+
 	});
