@@ -70,7 +70,7 @@ article, aside, details, footer, header, menu, nav, section { display: block; }
 .main h3 { font-size: 18px; color: #5e5e5e; line-height: 22px; padding-bottom: 8px; font-family: 'Ubuntu', sans-serif; font-weight: 500;  }
 .main section { clear: both; background: url(images/section-shadow.png) no-repeat center bottom; padding: 0 20px 60px; }
 .main ul { list-style: none; list-style-position: outside; }
-.main ul li { padding-bottom: 6px; padding-left: 10px; background: url(images/arr-ico.png) no-repeat 0 8px; }
+.main ul li { padding-bottom: 6px; padding-left: 10px; }
 .main ul li a { color: #FF0000; text-decoration: underline; } 
 .main ul li a:hover { text-decoration: none; } 
 
@@ -441,6 +441,21 @@ label{
 /* Fallbacks */
 .click-nav .no-js ul {display:none;}
 .click-nav .no-js:hover ul {display:block;}
+
+.link-nav {width:100%;}
+.link-nav ul {position:relative;font-weight:900;}
+.link-nav ul li {position:relative;list-style:none;cursor:pointer;}
+.link-nav ul li ul {position:absolute;left:0;right:0;}
+.link-nav ul .link-clicker {position:relative;}
+
+.link-nav img {position:absolute;top:9px;left:12px;}
+.link-nav ul li a {transition:background-color 0.2s ease-in-out;-webkit-transition:background-color 0.2s ease-in-out;
+-moz-transition:background-color 0.2s ease-in-out;display:block;padding:8px 10px 8px 40px;background:#FFF;color:#333;text-decoration:none;}
+
+
+/* Fallbacks */
+.link-nav .link-js ul {display:none;}
+.link-nav .link-js:hover ul {display:block;}
 
 #order{
 	font-size: 10px;

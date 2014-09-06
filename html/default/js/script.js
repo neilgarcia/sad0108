@@ -90,7 +90,7 @@
       var id = this.id;
       $.fancybox({
           width: 300,
-          height: 270,
+          height: 280,
           padding: 30,
           autoSize: false,
           href: 'php/order.php?id=' + id,
