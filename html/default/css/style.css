@@ -472,3 +472,12 @@ label{
 	box-sizing: border-box;
 	border-color: #6E2222 #6E2222 #511515;
 }
+
+.close_box{
+	float: right;
+}
+
+.box{
+	display: block;
+	height: 150px;
+}

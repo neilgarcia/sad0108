@@ -26,7 +26,8 @@
 							}
 
 						?>
-
+						<Br>
+						<a href="#" class="button link2">Proceed to Cart</a>
 
 			
 					
