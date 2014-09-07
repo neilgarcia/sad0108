@@ -17,7 +17,7 @@
 		$img = '<img src="data:image/$imgType;base64,' . base64_encode( $res['prod_img'] ) . '" width=100 height=100 align="left" />';
 		$name = $res['prod_name'];
 		$price = $res['price'];
-		echo '<div class="box">';
+		echo "<div class='box' id=$i>";
     	echo '<div class="close_box">X</div>';
     	$total = $quantity[$i] * $price;
     		echo $img;

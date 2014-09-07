@@ -475,6 +475,7 @@ label{
 
 .close_box{
 	float: right;
+	cursor: pointer;
 }
 
 .box{

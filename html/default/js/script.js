@@ -12,9 +12,24 @@
       $(this).parent().find('#prodTotal').text(total);
     });
     $(document).on('click','.close_box',function(){
-      $(this).parent().fadeTo(300,0,function(){
-            $(this).remove();
-      });
+      var num = $(this).parent().attr('id');
+        
+        $.ajax({
+            type: "POST",
+            url: "php/removeCart.php",
+            data: {num: num},
+            success: function(result){
+                $(this).parent().fadeTo(300,0,function(){
+                  $(this).remove();
+                });
+            },error: function(xhr, status, error) {
+                      alert(error);
+                     },
+                     dataType: 'text'
+
+          });
+
+      
     });
     
 		$("form").on('submit',function(event){
@@ -117,7 +132,7 @@
                    },
                    dataType: 'text'
 
-                });
+        });
         
         
     });
