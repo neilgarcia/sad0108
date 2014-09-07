@@ -14,6 +14,7 @@
                   url: "PHP/signin.php",
                   data: data,
                   success: function(data) {
+                    
                   	if(data==1){
                   		$('#status').css('color','black');
                   		$('#status').text('Login successful!');
@@ -84,13 +85,30 @@
         });
         
     });
+
+    $('#btnCart').click(function(){
+      alert('click');
+        event.preventDefault();
+        
+        data = $('#orderForm').serialize();
+        $.ajax({
+          type: "POST",
+          url: "PHP/orderIt.php",
+          data: data,
+          success: function(result){
+            
+              alert("Product Added to Cart!");
+          }
+        });
+        
+    });
     $(".fancybox").fancybox();
 
     $('.link').on('click', function(){
       var id = this.id;
       $.fancybox({
           width: 300,
-          height: 280,
+          height: 320,
           padding: 30,
           autoSize: false,
           href: 'php/order.php?id=' + id,
