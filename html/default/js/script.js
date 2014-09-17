@@ -11,26 +11,28 @@
 
       $(this).parent().find('#prodTotal').text(total);
     });
-    $(document).on('click','.close_box',function(){
-      var num = $(this).parent().attr('id');
-        
+    $(".close_box").unbind().click(function() {
+      var id = $(this).parent().find('#prodID').text();
+      var quantity = $(this).parent().find('#prodQuantity').val();
+
+      $(this).parent().fadeTo(300,0,function(){
+            $(this).remove();
+        });
         $.ajax({
             type: "POST",
             url: "php/removeCart.php",
-            data: {num: num},
+            data: {quantity: quantity, id: id},
             success: function(result){
-                $(this).parent().fadeTo(300,0,function(){
-                  $(this).remove();
-                });
+                
+             
             },error: function(xhr, status, error) {
                       alert(error);
                      },
                      dataType: 'text'
 
           });
-
-      
     });
+
     
 		$("form").on('submit',function(event){
                 
@@ -44,7 +46,7 @@
                   url: "PHP/signin.php",
                   data: data,
                   success: function(data) {
-                    
+                    alert(data);
                   	if(data==1){
                   		$('#status').css('color','black');
                   		$('#status').text('Login successful!');
@@ -125,8 +127,8 @@
           url: "php/orderIt.php",
           data: data,
           success: function(result){
-            
-              alert(result);
+            alert('Product Added to Cart!');
+            $.fancybox.close();
           },error: function(xhr, status, error) {
                     alert(error);
                    },

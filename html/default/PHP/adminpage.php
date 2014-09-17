@@ -10,7 +10,7 @@ Welcome,
 		$type = $_GET['imgType'];
 		include_once 'db.php';
 		$stmt = $dbc->prepare("DELETE FROM products WHERE prod_id = :prodId");
-
+		$stmt->execute(array(':prodId'=>$prodId));
 
 
 	}

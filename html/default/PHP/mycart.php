@@ -17,11 +17,13 @@
 		$img = '<img src="data:image/$imgType;base64,' . base64_encode( $res['prod_img'] ) . '" width=100 height=100 align="left" />';
 		$name = $res['prod_name'];
 		$price = $res['price'];
+		$prodID = $res['prod_id'];
 		echo "<div class='box' id=$i>";
     	echo '<div class="close_box">X</div>';
     	$total = $quantity[$i] * $price;
     		echo $img;
-    		echo "<h2>$name</h2>";
+    		echo "<h2 id='prodID'>$prodID</h2>";
+    		echo "<h2 id='prodName'>$name</h2>";
     		echo "<div id='prodPrice'>$price</div>";
     		echo "<input type='text' id='prodQuantity' value=$quantity[$i]>";
     		echo "<div id='prodTotal'>$total</div>";

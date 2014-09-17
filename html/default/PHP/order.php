@@ -21,7 +21,7 @@
 <script type="text/javascript" src="js/script.js"></script>
 <form id="orderForm">
 	<label>Product ID: </label><input type="text" readonly name="id" value="<?php echo $prod_id ?>">
-<br><label>Product Name: </label><input type="text" readonly name="" value="<?php echo $prod_name ?>">	
+<br><label>Product Name: </label><input type="text" readonly name="name" value="<?php echo $prod_name ?>">	
 <br><label>Product Type: </label><input type="text" readonly name="" value="<?php echo $prod_type ?>">
 <br><label>Design: </label><input type="text" readonly name="" value="<?php echo $design_name ?>">
 <br><label>Textile: </label><input type="text" readonly name="" value="<?php echo $textile ?>">
