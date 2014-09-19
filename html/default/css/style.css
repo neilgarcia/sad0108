@@ -457,6 +457,10 @@ label{
 .link-nav .link-js ul {display:none;}
 .link-nav .link-js:hover ul {display:block;}
 
+.inline{
+	display: inline-block;
+}
+
 #order{
 	font-size: 10px;
 	display: inline-block;
