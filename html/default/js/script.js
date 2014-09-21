@@ -4,7 +4,7 @@
      //alert($(this).parent().find('#prodTotal').html());
     
     //});
-  
+ 
     $('input:text').keyup(function () {
       var payTotal = 0;
       var price = $(this).parent().find('#prodPrice').text();
@@ -103,7 +103,26 @@
         
         
     });
+    $('#btnColorize').click(function(){
+        event.preventDefault();
+        
+        data = $('#frmColorize').serialize();
+        
+        $.ajax({
+          type: "POST",
+          url: "php/colorizer.php",
+          data: data,
+          success: function(result){
+            $('#colorizeShirt').html(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
 
+        });
+        
+        
+    });
     $('#quantity').keyup(function () {
 
       var quantity = $('#quantity').val();
@@ -136,5 +155,5 @@
           type: 'ajax'
       });
   });
-
+  $('#slider-id').liquidSlider();
 	});

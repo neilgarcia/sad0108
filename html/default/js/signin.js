@@ -16,7 +16,7 @@
                   url: "PHP/signin.php",
                   data: data,
                   success: function(data) {
-                    alert(data);
+                    
                     if(data==1){
                       $('#status').css('color','black');
                       $('#status').text('Login successful!');
