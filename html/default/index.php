@@ -6,13 +6,21 @@
 	<title>Stargame Sportswear</title>
 	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/liquid-slider.css">
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
-	
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.liquid-slider.min.js"></script>
+
+	<script>
+/* If installing in the footer, you won't need $(function() {} */
+
+</script>
 	<?php
 	if(!isset($_GET['action']) || ($_GET['action']<>'productAdd' && $_GET['action']<>'edit'))
 		echo '<script type="text/javascript" src="js/script.js"></script>';
@@ -60,48 +68,7 @@
 						<div class="cl">&nbsp;</div>
 					</div>
 				</div>
-				<div id="footer">
-					<div class="footer-cols">
-						<div class="col">
-							<h2>Services</h2>
-							<ul>
-								<li><a href="#"><strong>Pay Online</strong></a></li>
-								<li><a href="#"><strong>Customize Orders</strong></a></li>
-								<li><a href="#"><strong>Order Pre-designs</strong></a></li>
-							</ul>
-						</div>
-						<div class="col">
-							<h2>Events</h2>
-							<ul>
-								<li><a href="#"><strong>Summer Sale</strong></a></li>
-								<li><a href="#"><strong>Back-to-School Promo</strong></a></li>
-								<li><a href="#"><strong>Bulk Order Promo</strong></a></li>
-								<li><a href="#"><strong>Christmas Sale</strong></a></li>
-							</ul>
-						</div>
-						<div class="col">
-							<h2>Sizing</h2>
-							<ul>
-								<li><a href="#"><strong>Size Chart</strong></a></li>
-								<li><a href="#"><strong>Sample Jersey w/ Sizes</strong></a></li>
-								<li><a href="#"><strong>Ways to get your own size</strong></a></li>
-							</ul>
-						</div>
-						<div class="col">
-							<h2>Other Products</h2>
-							<ul>
-								<li><a href="#"><strong>Sports Cap</strong></a></li>
-								<li><a href="#"><strong>Sports Socks</strong></a></li>
-								<li><a href="#"><strong>Sports Headbands</strong></a></li>
-								<li><a href="#"><strong>Sports Wristbands</strong></a></li>
-							</ul>
-						</div>
-						<div class="cl">&nbsp;</div>
-					</div>
-					<!-- end of footer-cols -->
-					<?php include_once 'footer.php'; ?>
-				</div>
-			</div>
+				<?php include_once 'footer.php'; ?>
 			<!-- end of container -->	
 		</div>
 		<!-- end of shell -->	

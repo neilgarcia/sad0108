@@ -71,7 +71,7 @@
 							
 						<li><a href="?action=faqs">FAQ's</a></li>
 						<li><a href="?action=sportsfolio">SPORTSFOLIO</a></li>
-						<li><a href="#">ONLINE SERVICES</a></li>
+						<li><a href="?action=services">ONLINE SERVICES</a></li>
 						<li><a href="?action=contactus">CONTACT US</a></li>
 						<li><a href="?action=contactus">GALLERY</a></li>
 						

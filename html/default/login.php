@@ -4,8 +4,8 @@
 <head>
 <link rel="shortcut icon" type="image/x-icon" href="css/images/login.ico" />
 <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/signin.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
   <meta charset="UTF-8">
 
   <title>Stargame Login</title>

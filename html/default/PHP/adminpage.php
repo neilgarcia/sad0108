@@ -21,8 +21,6 @@ Welcome,
 <h2><strong>ADMIN PAGE</strong></h2>
 <br>
 <a href="?action=productAdd" id="btnAdd" class="sidemargin button">Add</a>
-<a href="#" id="btnEdit"  class="sidemargin button">Edit</a>
-<a href="#" id="btnDelete"  class="sidemargin button">Delete</a>
 <br><br>
 <?php
 	

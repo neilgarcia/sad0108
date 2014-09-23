@@ -4,12 +4,24 @@
      //alert($(this).parent().find('#prodTotal').html());
     
     //});
+ 
     $('input:text').keyup(function () {
+      var payTotal = 0;
       var price = $(this).parent().find('#prodPrice').text();
       var quantity = $(this).parent().find('#prodQuantity').val();
       var total = quantity*price;
 
       $(this).parent().find('#prodTotal').text(total);
+      $('div').each(function(){
+        if(this.id == 'prodTotal'){
+          payTotal = parseInt(payTotal) + parseInt($(this).text());
+        }
+          
+      });
+      $('#payPrice').val(payTotal);
+      
+      $('#totalPrice').text(payTotal);
+        
     });
     $(".close_box").unbind().click(function() {
       var id = $(this).parent().find('#prodID').text();
@@ -23,8 +35,8 @@
             url: "php/removeCart.php",
             data: {quantity: quantity, id: id},
             success: function(result){
-                
-             
+                $('#totalPrice').text(result);
+                $('#payPrice').val(result);
             },error: function(xhr, status, error) {
                       alert(error);
                      },
@@ -34,54 +46,7 @@
     });
 
     
-		$("form").on('submit',function(event){
-                
-                     
-                event.preventDefault();
-                data = $(this).serialize();
-                
-                $.ajax({
-
-                  type: "POST",
-                  url: "PHP/signin.php",
-                  data: data,
-                  success: function(data) {
-                    alert(data);
-                  	if(data==1){
-                  		$('#status').css('color','black');
-                  		$('#status').text('Login successful!');
-                  		$('#status').fadeIn(500);
-                  		$('#status').delay(1000).fadeOut(500);
-                      setTimeout(function () {
-                         window.location.replace('http://localhost/sad0108/html/default/index.php');
-                      }, 2000);
-                      
-                  	}else if(data==3){
-
-                      $('#status').css('color','black');
-                      $('#status').text('Login successful!');
-                      $('#status').fadeIn(500);
-                      $('#status').delay(1000).fadeOut(500);
-                      setTimeout(function () {
-                         window.location.replace('http://localhost/sad0108/html/default/index.php?action=admin');
-                      }, 2000);
-
-                    }else{
-                  		$('#status').css('color','red');
-                  		$('#status').text('Invalid Login!');
-                  		$('#status').fadeIn(500);
-                  		$('#status').delay(1000).fadeOut(500);
-                  		
-                  	}
-                  },
-                  error: function(xhr, status, error) {
-                    alert(error);
-                   },
-                   dataType: 'text'
-
-                });
-                
-            });
+		
 
       $('#button').click(function(){
 
@@ -138,7 +103,26 @@
         
         
     });
+    $('#btnColorize').click(function(){
+        event.preventDefault();
+        
+        data = $('#frmColorize').serialize();
+        
+        $.ajax({
+          type: "POST",
+          url: "php/colorizer.php",
+          data: data,
+          success: function(result){
+            $('#colorizeShirt').html(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
 
+        });
+        
+        
+    });
     $('#quantity').keyup(function () {
 
       var quantity = $('#quantity').val();
@@ -171,5 +155,5 @@
           type: 'ajax'
       });
   });
-
+  $('#slider-id').liquidSlider();
 	});

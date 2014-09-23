@@ -26,7 +26,7 @@
 										<div class="box-cnt">
 											<p>We value your preference and interest. So what are you waiting for? Customize now your own sports apparel and be featured at our website.</p>
 										</div>
-										<a href="#" class="grey-btn">Customize now</a>
+										<a href="?action=customize" class="grey-btn">Customize now</a>
 									</div>
 								</li>
 								<li>
@@ -55,7 +55,7 @@
 							<div class="col-cnt">
 								<h2>Customization</h2>
 								<p>Want to be unique and be featured here?</p>
-								<a href="#" class="more">Customize Now!</a>
+								<a href="?action=customize" class="more">Customize Now!</a>
 							</div>
 						</div>
 						<div class="col">
