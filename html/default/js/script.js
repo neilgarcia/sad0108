@@ -1,10 +1,13 @@
-	$(document).ready(function(){
+  $(document).ready(function(){
 
     //$(document).on('click','.close_box',function(){
      //alert($(this).parent().find('#prodTotal').html());
     
     //});
- 
+    $('.liquid-slider').liquidSlider({
+      continuous:false,
+      slideEaseFunction: "easeInOutCubic"
+    });
     $('input:text').keyup(function () {
       var payTotal = 0;
       var price = $(this).parent().find('#prodPrice').text();
@@ -21,9 +24,11 @@
       $('#payPrice').val(payTotal);
       
       $('#totalPrice').text(payTotal);
+      $('#prodTotal').text(payTotal);
         
     });
     $(".close_box").unbind().click(function() {
+      
       var id = $(this).parent().find('#prodID').text();
       var quantity = $(this).parent().find('#prodQuantity').val();
 
@@ -46,7 +51,13 @@
     });
 
     
-		
+    $('#cQuantity').keyup(function(){
+
+      var price = $(this).val() * 1000;
+      $('#cPrice').val(price);
+      $('#payPrice').val(price);
+
+    });
 
       $('#button').click(function(){
 
@@ -67,6 +78,9 @@
                 $('#signupResult').css('color','red');
               }else if(result==4){
                 $('#signupResult').text('Password does not match!');
+                $('#signupResult').css('color','red');
+              }else if(result==5){
+                $('#signupResult').text('Invalid Email!');
                 $('#signupResult').css('color','red');
               }else{
                 $('#signupResult').text('Registration Successful!');
@@ -92,7 +106,7 @@
           url: "php/orderIt.php",
           data: data,
           success: function(result){
-            alert('Product Added to Cart!');
+            alert(result);
             $.fancybox.close();
           },error: function(xhr, status, error) {
                     alert(error);
@@ -103,10 +117,33 @@
         
         
     });
+
+    $('#paypalCustom').click(function(){
+        event.preventDefault();
+        
+        data = $('#frmColorize').serialize();
+       
+        $.ajax({
+          type: "POST",
+          url: "php/customSession.php",
+          data: data,
+          success: function(result){
+            window.location = "?action=custom"
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+        
+        
+    });
+   
     $('#btnColorize').click(function(){
         event.preventDefault();
         
         data = $('#frmColorize').serialize();
+        
         
         $.ajax({
           type: "POST",
@@ -123,6 +160,104 @@
         
         
     });
+    $('#btnSummary').click(function(){
+        event.preventDefault();
+        
+        $.ajax({
+          type: "POST",
+          url: "php/addIt.php",
+          
+          success: function(result){
+            alert(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+        
+        
+    });
+    $('#btnCustomers').click(function(){
+        event.preventDefault();
+        
+        
+        
+        
+        $.ajax({
+          type: "POST",
+          url: "php/customerView.php",
+         
+          success: function(result){
+            $('#tableContainer').html(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+        
+        
+    });
+
+    $('#btnProducts').click(function(){
+        event.preventDefault();
+        
+        
+        
+        
+        $.ajax({
+          type: "POST",
+          url: "php/productsView.php",
+         
+          success: function(result){
+            $('#tableContainer').html(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+        
+        
+    });
+
+    $('#fontTop').click(function(){
+        
+        $(this).css('border','1px solid black');
+        $('#fontBottom').css('border','none');
+        $('#fontMiddle').css('border','none');
+        $('#fontPosition').val('top');
+        
+    });
+    $('#fontMiddle').click(function(){
+        
+        $(this).css('border','1px solid black');
+        $('#fontTop').css('border','none');
+        $('#fontBottom').css('border','none');
+        $('#fontPosition').val('middle');
+        
+    });
+    $('#fontBottom').click(function(){
+        
+        $(this).css('border','1px solid black');
+        $('#fontTop').css('border','none');
+        $('#fontMiddle').css('border','none');
+        $('#fontPosition').val('bottom');
+        
+    });
+    $('#nameTop').click(function(){
+
+      $(this).css('border','1px solid black');
+      $('#nameBottom').css('border','none');
+      $('#playerName').val('top');
+    });
+    $('#nameBottom').click(function(){
+
+      $(this).css('border','1px solid black');
+      $('#nameTop').css('border','none');
+      $('#playerName').val('bottom');
+    });
     $('#quantity').keyup(function () {
 
       var quantity = $('#quantity').val();
@@ -134,10 +269,11 @@
     $(".fancybox").fancybox();
 
     $('.link').on('click', function(){
+      event.preventDefault();
       var id = this.id;
       $.fancybox({
-          width: 300,
-          height: 320,
+          width: 600,
+          height: 380,
           padding: 30,
           autoSize: false,
           href: 'php/order.php?id=' + id,
@@ -145,6 +281,7 @@
       });
   });
   $('.link2').on('click', function(){
+    event.preventDefault();
       var id = this.id;
       $.fancybox({
           width: 300,
@@ -155,5 +292,5 @@
           type: 'ajax'
       });
   });
-  $('#slider-id').liquidSlider();
-	});
+  
+  });

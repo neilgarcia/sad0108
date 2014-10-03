@@ -12,7 +12,10 @@
 	include_once '../db.php';
 
 	if(!empty($fname) && !empty($lname) && !empty($username) && !empty($cont) && !empty($pass) && !empty($repass) && !empty($add) && !empty($email)){
-		$stmt = $dbc->prepare("SELECT * FROM accounts WHERE username = :user");
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+     		echo "5";
+		}else{
+			$stmt = $dbc->prepare("SELECT * FROM accounts WHERE username = :user");
 		$stmt->execute(array(':user'=>$username));
 		$result = $stmt->rowCount();
 
@@ -37,6 +40,8 @@
 			}
 			
 		}
+		}
+		
 	}else{
 		echo 3;
 	}

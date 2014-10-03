@@ -1,4 +1,15 @@
-				<div class="registration">
+				<?php
+					if(isset($_SESSION['activeclient'])||isset($_SESSION['activeadmin'])){
+						echo "<div class=\"registration\">
+						<form id='reg'>
+				
+				
+					<center>
+					<h1 id='signupmessage'>YOU ARE ALREADY REGISTERED!</h1>";
+					
+					}else{
+						?>
+						<div class="registration">
 				<form id="reg">
 				
 				
@@ -36,3 +47,7 @@
 			
 				</form>
 				</div>
+<?php
+					}
+?>
+				

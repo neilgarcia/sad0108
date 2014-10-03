@@ -17,8 +17,13 @@
 	$type = $res['type'];
 	$font = $res['font'];
 	$price = $res['price'];
+	$product = $res['prod_img'];
+	$imgType = $res['img_type'];
 ?>
 <script type="text/javascript" src="js/script.js"></script>
+<?php
+	echo '<img src="data:image/$imgType;base64,' . base64_encode( $product ) . '" align=left style="width:300px;height:350px;vertical-align:middle;margin-right:10px;"/>';
+ ?>
 <form id="orderForm">
 	<label>Product ID: </label><input type="text" readonly name="id" value="<?php echo $prod_id ?>">
 <br><label>Product Name: </label><input type="text" readonly name="name" value="<?php echo $prod_name ?>">	
@@ -30,7 +35,7 @@
 <br><label>Reversible: </label><input type="text" name="" readonly value="<?php echo $reversible ?>">
 <br><label>Type: </label><input type="text" readonly name="" value="<?php echo $type ?>">
 <br><label>Font: </label><input type="text" readonly name="" value="<?php echo $font ?>">
-<br><label>Sizes: </label><select name="" readonly><?php foreach ($size as $key => $value) {
+<br><label>Sizes: </label><select name="size" readonly><?php foreach ($size as $key => $value) {
 
 	echo "<option>" . $value . "</option>";
 	

@@ -1,6 +1,6 @@
 <!-- header -->
 				<header id="header">
-					<h1 id="logo"><a href="home.php">SG</a></h1>
+					<h1 id="logo"><a href="?action=home">SG</a></h1>
 					<!-- search -->
 					<div class="search">
 						
@@ -66,17 +66,11 @@
 					<ul>
 						<li class="active"><a href="?action=home">HOME</a></li>
 						<li><a href="?action=aboutus">ABOUT US</a>
-							
-							
-							
 						<li><a href="?action=faqs">FAQ's</a></li>
 						<li><a href="?action=sportsfolio">SPORTSFOLIO</a></li>
 						<li><a href="?action=services">ONLINE SERVICES</a></li>
 						<li><a href="?action=contactus">CONTACT US</a></li>
-						<li><a href="?action=contactus">GALLERY</a></li>
-						
-
-						
+						<li><a href="?action=contactus">GALLERY</a></li>	
 					</ul>
 				</nav>
 				<!-- end of navigation -->

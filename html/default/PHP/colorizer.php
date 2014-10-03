@@ -1,8 +1,8 @@
 					<?php
 
 
-							$file="../css/images/shirtTest.png";
-
+							$file="../css/images/shirt.png";
+							
 							$inner = filter_input(INPUT_POST, 'inner');
 							$outer = filter_input(INPUT_POST, 'outer');
 							$rgbInner = explode(',', $inner);
@@ -14,7 +14,7 @@
 							
 							$index = imagecolorclosest( $im,  150,150,150 ); // get White COlor
 							imagecolorset($im,$index,$rgbOuter[0],$rgbOuter[1],$rgbOuter[2]); // SET NEW COLOR
-							$index = imagecolorclosest( $im,  0,0,0 ); // get White COlor
+							$index = imagecolorclosest( $im,  101,101,101 ); // get White COlor
 							imagecolorset($im,$index,$rgbInner[0],$rgbInner[1],$rgbInner[2]); // SET NEW COLOR
 							ob_start();
 							imagepng($im);
