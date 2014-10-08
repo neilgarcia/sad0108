@@ -29,11 +29,13 @@
 .liquid-slider {
   background: #f2f2f2;
   width: 600px;
+
   margin: 0 auto;
   float: left;
   overflow: hidden;
   position: relative;
 }
+
 .arrows .liquid-slider {
   /* Margin between slider and arrows */
   margin: 0 10px;

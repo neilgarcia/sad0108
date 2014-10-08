@@ -397,9 +397,17 @@ label{
 .link img{
 	width: 150px;
 	height: 150px;
+	border-radius: 5px;
+	border:	2px solid #4ce;
 	margin: 10px;
 }
-
+.imgGallery img{
+	border-radius: 5px;
+	border:	2px solid #4ae;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
 .buttonLike {
     overflow: visible;
     width: auto;
@@ -534,29 +542,31 @@ html>body div.tableContainer table {
 /* In WinIE 6.x, any element with a position property set to relative and is a child of       */
 /* an element that has an overflow property set, the relative value translates into fixed.    */
 /* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
-thead.fixedHeader tr {
+.fixedHeader tr {
 	position: relative
 }
 
 /* set THEAD element to have block level attributes. All other non-IE browsers            */
 /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
-html>body thead.fixedHeader tr {
+html>body .fixedHeader tr {
 	display: block
 }
 
 /* make the TH elements pretty */
-thead.fixedHeader th {
-	background: #C96;
-	border-left: 1px solid #EB8;
-	border-right: 1px solid #B74;
-	border-top: 1px solid #EB8;
+.fixedHeader th {
+	background: #C66;
+	
+	border-left: 1px solid #E88;
+	border-right: 1px solid #B44;
+	border-top: 1px solid #E88;
 	font-weight: normal;
 	padding: 4px 3px;
-	text-align: left
+	text-align: left;
+
 }
 
 /* make the A elements pretty. makes for nice clickable headers                */
-thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+.fixedHeader a, .fixedHeader a:link, .fixedHeader a:visited {
 	color: #FFF;
 	display: block;
 	text-decoration: none;
@@ -565,7 +575,7 @@ thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
 
 /* make the A elements pretty. makes for nice clickable headers                */
 /* WARNING: swapping the background on hover may cause problems in WinIE 6.x   */
-thead.fixedHeader a:hover {
+.fixedHeader a:hover {
 	color: #FFF;
 	display: block;
 	text-decoration: underline;
@@ -576,7 +586,7 @@ thead.fixedHeader a:hover {
 /* set TBODY element to have block level attributes. All other non-IE browsers            */
 /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
 /* induced side effect is that child TDs no longer accept width: auto                     */
-html>body tbody.scrollContent {
+html>body .scrollContent {
 	display: block;
 	height: 262px;
 	overflow: auto;
@@ -585,7 +595,7 @@ html>body tbody.scrollContent {
 
 /* make TD elements pretty. Provide alternating classes for striping the table */
 /* http://www.alistapart.com/articles/zebratables/                             */
-tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+.scrollContent td, .scrollContent tr.normalRow td {
 	background: #FFF;
 	border-bottom: none;
 	border-left: none;
@@ -594,7 +604,7 @@ tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
 	padding: 2px 3px 3px 4px
 }
 
-tbody.scrollContent tr.alternateRow td {
+.scrollContent tr.alternateRow td {
 	background: #EEE;
 	border-bottom: none;
 	border-left: none;
@@ -606,30 +616,30 @@ tbody.scrollContent tr.alternateRow td {
 /* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
 /* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
 /* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
-html>body thead.fixedHeader th {
+html>body .fixedHeader th {
 	width: 200px
 }
 
-html>body thead.fixedHeader th + th {
+html>body .fixedHeader th + th {
 	width: 240px
 }
 
-html>body thead.fixedHeader th + th + th {
+html>body .fixedHeader th + th + th {
 	width: 316px
 }
 
 /* define width of TD elements: 1st, 2nd, and 3rd respectively.          */
 /* All other non-IE browsers.                                            */
 /* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
-html>body tbody.scrollContent td {
+html>body .scrollContent td {
 	width: 200px
 }
 
-html>body tbody.scrollContent td + td {
+html>body .scrollContent td + td {
 	width: 240px
 }
 
-html>body tbody.scrollContent td + td + td {
+html>body .scrollContent td + td + td {
 	width: 300px
 }
 
@@ -652,4 +662,12 @@ display: block;
 margin: 0 auto;
 padding: 4px 0;
 width: 100px;
+border-radius: 3px;
+border:none;
+}
+
+#slider-id .ls-panel {  
+  width: 800px !important; 
+  display: block;
+  float: left;
 }

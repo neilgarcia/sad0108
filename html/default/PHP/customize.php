@@ -15,7 +15,7 @@
 
 						<br><br>
 						<form id="frmColorize">
-						<div class="liquid-slider" id="slider-id">
+						<div class="liquid-slider" id="custom-slide">
 						
 						     <div>
 						         
@@ -23,24 +23,24 @@
 						         	<h2>Select Shirt Color</h2>
 						         	<label>Inner Color:</label>
 						         	<select name="inner">
-						         		<option value="255,0,0">Red</option>
-						         		<option value="0,255,0">Green</option>
-						         		<option value="0,0,255">Blue</option>
-						         		<option value="255,255,0">Yellow</option>
-						         		<option value="255,165,0">Orange</option>
-						         		<option value="238,130,238">Violet</option>
-						         		<option value="0,0,0">Black</option>
+						         		<option value="255,0,0;red">Red</option>
+						         		<option value="0,255,0;green">Green</option>
+						         		<option value="0,0,255;blue">Blue</option>
+						         		<option value="255,255,0;yellow">Yellow</option>
+						         		<option value="255,165,0;orange">Orange</option>
+						         		<option value="238,130,238;violet">Violet</option>
+						         		<option value="0,0,0;black">Black</option>
 						         	</select>
 						         	<Br><br>
 						         	<label>Outer Color:</label>
 						         	<select name="outer">
-						         		<option value="255,0,0">Red</option>
-						         		<option value="0,255,0">Green</option>
-						         		<option value="0,0,255">Blue</option>
-						         		<option value="255,255,0">Yellow</option>
-						         		<option value="255,165,0">Orange</option>
-						         		<option value="238,130,238">Violet</option>
-						         		<option value="0,0,0">Black</option>
+						         		<option value="255,0,0;red">Red</option>
+						         		<option value="0,255,0;green">Green</option>
+						         		<option value="0,0,255;blue">Blue</option>
+						         		<option value="255,255,0;yellow">Yellow</option>
+						         		<option value="255,165,0;orange">Orange</option>
+						         		<option value="238,130,238;violet">Violet</option>
+						         		<option value="0,0,0;black">Black</option>
 						         	</select>
 						         	<br><Br>
 						         	
@@ -137,6 +137,7 @@
 						     	<Br>
 						     	Quantity:<input type="text" id="cQuantity" name="cQuantity" value=1><Br>
 						     	Price:<input type="text" readonly id="cPrice" name="cPrice" value="1000"><Br>
+						     	
 						     	<input type="button" id="paypalCustom" value="Proceed to payment!">
 						     </div>
 						</div>

@@ -1,17 +1,7 @@
 
 				<?php
 
-				$inner = filter_input(INPUT_POST, 'inner');
-				$outer = filter_input(INPUT_POST, 'output');
-				$tname = filter_input(INPUT_POST, 'tName');
-				$fPos = filter_input(INPUT_POST, 'fontPosition');
-				$cfType = filter_input(INPUT_POST, 'cFontType');
-				$fType = filter_input(INPUT_POST, 'fontType');
-				$pName = filter_input(INPUT_POST, 'playerName');
-				$textile = filter_input(INPUT_POST, 'cTextile');
-				$logoPosition = filter_input(INPUT_POST, 'cLogoPosition');
-				$sizes = filter_input(INPUT_POST, 'sizes');
-				$quantity = filter_input(INPUT_POST, 'cQuantity');
+				
 
 				?>
 				<div class="main">
@@ -64,7 +54,7 @@
 							$sizes =$_SESSION['sizes'];
 							$quantity =$_SESSION['quantity'];
 				
-
+						
 
 
 
@@ -85,7 +75,7 @@
 							echo "<h5>Player Name Position: $pName</h5>";
 							echo "<h5>Textile: $textile</h5>";
 							echo "<h5>Logo Position: $logoPosition</h5>";
-							echo "<h5></h5>";
+							echo "<h5>Sizes: $sizes</h5>";
 							echo "<h5>Quantity: $quantity</h5>";
 							
 							$total = 1000 * $quantity;
@@ -93,9 +83,10 @@
 
 						echo "<h3 class='topdown'>Total Amount: " . $total .  "</h3>"
 					?>
-						
-					</div>
-			
+					
+
+					</div><br><br>
+			<input type="button" id="btnCustomSummary" class="login" value="Finish">
 					
 					
 					</section>

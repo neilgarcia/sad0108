@@ -5,8 +5,10 @@
 							
 							$inner = filter_input(INPUT_POST, 'inner');
 							$outer = filter_input(INPUT_POST, 'outer');
-							$rgbInner = explode(',', $inner);
-							$rgbOuter = explode(',', $outer);
+							$inner = explode(';', $inner);
+							$outer = explode(';', $outer);
+							$rgbInner = explode(',', $inner[0]);
+							$rgbOuter = explode(',', $outer[0]);
 							
 
 							$im = imagecreatefrompng ($file);

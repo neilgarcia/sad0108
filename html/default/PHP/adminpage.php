@@ -25,6 +25,15 @@ Welcome,
 <a href="#" id="btnProducts" class="sidemargin button">Products</a>
 <a href="#" id="btnOrders" class="sidemargin button">Orders</a>
 <a href="#" id="btnCustOrders" class="sidemargin button">Customized Orders</a>
+
+<form>
+
+<label>Search: </label>
+<input type="hidden" id="hidden">
+<input type="text" id="searchProducts">
+<input type="text" id="searchCustomer" style="display:none;">
+</form>
+
 <div id="tblContents">
 	<br><br>
 	<?php
@@ -35,9 +44,11 @@ Welcome,
 		$stmt->execute();
 
 		echo '<div id="tableContainer" class="tableContainer">';
-		echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="">';
-		echo '<thead class="fixedHeader">
-			<tr>
+		echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="scrollContent">';
+		
+		
+		echo '
+			<tr class=fixedHeader>
 					<th><a href="#">Product ID</a></th>
 					<th><a href="#">Product Name</a></th>
 					<th><a href="#">Product Type</a></th>
@@ -52,8 +63,7 @@ Welcome,
 					<th><a href="#">Price</a></th>
 					<th><a href="#">Process</a></th>
 				</tr>
-		</thead>';
-		echo '<tbody class="scrollContent">';
+		';
 		while ($res = $stmt->fetch(PDO::FETCH_ASSOC)){
 			$ctr++;
 				$prod_id = $res['prod_id'];
@@ -104,6 +114,7 @@ Welcome,
 			echo "<td>" . $res['font'] . "</td>";
 			echo "<td>" . $res['sizes'] . "</td>";
 			echo "<td>" . $res['price'] . "</td>";
+
 			echo "<td>
 					<a href=http://localhost/sad0108/html/default/index.php?action=admin&prodId=" . $res['prod_id'] . "&imgType=" . $res['img_type'] . ">Delete</a>
 					<a href=http://localhost/sad0108/html/default/index.php?action=edit&data=$edit>Edit</a>
@@ -115,7 +126,7 @@ Welcome,
 		
 	?>
 
-	</tbody>
+
 		</table>
 </div>
 

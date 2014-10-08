@@ -157,6 +157,14 @@
 					<div class="block">
 					<input type="radio" name="font" value="Collegiate" <?php if(isset($_POST['font']) && $_POST['font']=='Collegiate'){ echo ' checked="checked"'; } ?>>Collegiate<br>
 					<input type="radio" name="font" value="Old English" <?php if(isset($_POST['font']) && $_POST['font']=='Old English'){ echo ' checked="checked"'; } ?>>Old English<br>
+					<input type="radio" name="font" value="Academic m54" <?php if(isset($_POST['font']) && $_POST['font']=='Academic m54'){ echo ' checked="checked"'; } ?>>Academic m54<br>
+					<input type="radio" name="font" value="Dollie Script" <?php if(isset($_POST['font']) && $_POST['font']=='Dollie Script'){ echo ' checked="checked"'; } ?>>Dollie Script<br>
+					<input type="radio" name="font" value="Motor" <?php if(isset($_POST['font']) && $_POST['font']=='Motor'){ echo ' checked="checked"'; } ?>>Motor<br>
+					<input type="radio" name="font" value="Remachine Script" <?php if(isset($_POST['font']) && $_POST['font']=='Remachine Script'){ echo ' checked="checked"'; } ?>>Remachine Script<br>
+					<input type="radio" name="font" value="Birds of Paradise" <?php if(isset($_POST['font']) && $_POST['font']=='Birds of Paradise'){ echo ' checked="checked"'; } ?>>Birds of Paradise<br>
+					<input type="radio" name="font" value="Death Maach" <?php if(isset($_POST['font']) && $_POST['font']=='Death Maach'){ echo ' checked="checked"'; } ?>>Death Maach<br>
+					<input type="radio" name="font" value="Jersey m54" <?php if(isset($_POST['font']) && $_POST['font']=='Jersey m54'){ echo ' checked="checked"'; } ?>>Jersey m54<br>
+					<input type="radio" name="font" value="SF Collegiate" <?php if(isset($_POST['font']) && $_POST['font']=='SF Collegiate'){ echo ' checked="checked"'; } ?>>SF Collegiate<br>
 					</div>
 					<br><br><br>
 					<label for="sizes">Available Sizes:</label>

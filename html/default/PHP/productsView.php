@@ -8,9 +8,11 @@
 		$stmt->execute();
 
 		echo '<div id="tableContainer" class="tableContainer">';
-		echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="">';
-		echo '<thead class="fixedHeader">
-			<tr>
+		echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="scrollContent">';
+		
+		
+		echo '
+			<tr class=fixedHeader>
 					<th><a href="#">Product ID</a></th>
 					<th><a href="#">Product Name</a></th>
 					<th><a href="#">Product Type</a></th>
@@ -25,8 +27,7 @@
 					<th><a href="#">Price</a></th>
 					<th><a href="#">Process</a></th>
 				</tr>
-		</thead>';
-		echo '<tbody class="scrollContent">';
+		';
 		while ($res = $stmt->fetch(PDO::FETCH_ASSOC)){
 			$ctr++;
 				$prod_id = $res['prod_id'];

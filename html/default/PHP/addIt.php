@@ -14,14 +14,16 @@
 
 		:orderID,
 		:orderDate,
-		:customerID
+		:customerID,
+		:stat
 
 	)");
 	$stmt->execute(array(
 
 		':orderID'=>$p,
 		':orderDate'=>$date,
-		':customerID'=>$cid
+		':customerID'=>$cid,
+		':stat'=>'pending'
 
 	));
 
@@ -38,8 +40,8 @@
 
 			:payID,
 			:prodID,
-			:quantity,
 			:amount,
+			:quantity,
 			:total
 
 		)");
@@ -54,5 +56,10 @@
 		));
 
 	}
-
+	$cid = $_SESSION['cid'];
+	$user = $_SESSION['activeclient'];
+	session_destroy();
+	session_start();
+	$_SESSION['cid'] = $cid;
+	$_SESSION['activeclient'] = $user;
 ?>

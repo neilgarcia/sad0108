@@ -3,9 +3,9 @@
 	include_once '../db.php';
 	$stmt = $dbc->prepare("SELECT * FROM users");
 	$stmt->execute();
-	echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="">';
-		echo '<thead class="fixedHeader">
-			<tr>
+	echo '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="scrollContent">';
+		echo '
+			<tr class="fixedHeader">
 					<th><a href="#">Customer ID</a></th>
 					<th><a href="#">First Name</a></th>
 					<th><a href="#">Last Name</a></th>
@@ -14,8 +14,8 @@
 					<th><a href="#">Address</a></th>
 
 				</tr>
-		</thead>';
-		echo '<tbody class="scrollContent">';
+		';
+		
 		$ctr = 0;
 	while($res = $stmt->fetch(PDO::FETCH_ASSOC)){
 		$ctr++;
