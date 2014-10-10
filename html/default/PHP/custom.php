@@ -86,6 +86,14 @@
 					
 
 					</div><br><br>
+					<form name="_xclick" id="_customPay" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="stargamesportswear@yahoo.com">
+	<input type="hidden" name="currency_code" value="PHP">
+	<input type="hidden" name="item_name" value="shirt">
+	<input type="hidden" id='payPrice' name="amount" value="<?php echo $total ?>">
+	
+	</form>
 			<input type="button" id="btnCustomSummary" class="login" value="Finish">
 					
 					

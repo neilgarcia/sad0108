@@ -1,7 +1,4 @@
-
-				
-				<div class="main">
-					<a href="#" class="m-btn-grey grey-btn">request a demo</a>
+<a href="#" class="m-btn-grey grey-btn">request a demo</a>
 					<section class="cols">
 						<div class="cl">&nbsp;</div>
 					</section>
@@ -49,7 +46,3 @@
 					
 					</center>
 					</section>
-				</div>
-				
-				<!-- end of main -->
-				

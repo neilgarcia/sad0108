@@ -13,8 +13,8 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css' />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+ 	<script src="js/jquery.touchSwipe.min.js"></script>
 	<script src="js/jquery.liquid-slider.min.js"></script>
 
 	<script>

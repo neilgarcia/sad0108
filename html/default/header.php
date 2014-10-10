@@ -8,7 +8,7 @@
 								<div class="click-nav">
 								  <ul class="no-js">
 								    <li>
-								      <a href="#" class="clicker"><img src="css/images/i-1.png" alt="Icon">
+								      <a href="?action=transactions" class="clicker"><img src="css/images/i-1.png" alt="Icon">
 
 								      <?php
 

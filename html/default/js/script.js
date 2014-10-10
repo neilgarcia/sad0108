@@ -29,6 +29,10 @@
       continuous:false,
       slideEaseFunction: "easeInOutCubic"
     });
+    $('#sports-slide').liquidSlider({
+      continuous:false,
+      slideEaseFunction: "easeInOutCubic"
+    });
     $('#slider-id').liquidSlider({
       continuous:false,
       slideEaseFunction: "easeInOutCubic"
@@ -157,7 +161,11 @@
           url: "php/customSession.php",
           data: data,
           success: function(result){
-            window.location = "?action=custom"
+            if(result=="1"){
+              alert("Please login to continue!");
+            }else{
+              window.location = "?action=custom"
+            }
           },error: function(xhr, status, error) {
                     alert(error);
                    },
@@ -218,7 +226,7 @@
           
           success: function(result){
             alert("Transction Completed!");
-            window.location.replace('?action=home');
+            $('#_customPay').submit();
           },error: function(xhr, status, error) {
                     alert(error);
                    },
@@ -362,8 +370,8 @@
     });
 
     
-
-    $('.link').on('click', function(){
+    $(document).delegate(".link","click",function(e){
+    
       event.preventDefault();
       var id = this.id;
       $.fancybox({
@@ -372,7 +380,25 @@
           padding: 30,
           autoSize: false,
           href: 'php/order.php?id=' + id,
-          type: 'ajax'
+          type: 'ajax',
+          afterClose: function(){
+            $.ajax({
+          type: "POST",
+          url: "php/sportsfolio2.php",
+         
+          success: function(result){
+            $('.main').html(result);
+            $('#slider-id').liquidSlider({
+      continuous:false,
+      slideEaseFunction: "easeInOutCubic"
+    });
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+          }
       });
   });
   $('.link2').on('click', function(){
@@ -434,6 +460,23 @@
         });
 
     });
-   
+  $(document).delegate("#transactionID","click",function(e){
+
+    event.preventDefault();
+    var id = $(this).text();
+    $.ajax({
+          type: "POST",
+          url: "php/userTransactions.php",
+          data: {'id' : id},
+          success: function(result){
+            $('#tableContainer').html(result);
+          },error: function(xhr, status, error) {
+                    alert(error);
+                   },
+                   dataType: 'text'
+
+        });
+
+  });
 
   });

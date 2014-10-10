@@ -1,7 +1,8 @@
 <?php
 
 	session_start();
-	$_SESSION['inner'] = filter_input(INPUT_POST, 'inner');
+	if(isset($_SESSION['activeclient'])){
+		$_SESSION['inner'] = filter_input(INPUT_POST, 'inner');
 	$_SESSION['inner'] = explode(';', $_SESSION['inner']);
 	$_SESSION['inner'] = $_SESSION['inner'][1];
 	$_SESSION['outer'] = filter_input(INPUT_POST, 'outer');
@@ -15,5 +16,10 @@
 	$_SESSION['logoPosition'] = filter_input(INPUT_POST, 'cLogoPosition');
 	$_SESSION['sizes'] = isset($_POST['sizes'])?implode(',', $_POST['sizes']):'';
 	$_SESSION['quantity'] = filter_input(INPUT_POST, 'cQuantity');
+	echo "2";
+}else{
+	echo "1";
+}
+	
 
 ?>

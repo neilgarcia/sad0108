@@ -15,7 +15,7 @@
 
 						<br><br>
 						<form id="frmColorize">
-						<div class="liquid-slider" id="custom-slide">
+						<div class="liquid-slider" id="sports-slide">
 						
 						     <div>
 						         

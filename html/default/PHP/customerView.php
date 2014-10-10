@@ -27,7 +27,7 @@
 		$add = $res['address'];
 		if($ctr%2==0){
 			echo "<tr class='normalRow'>";
-			echo "<td>$CId</td>";
+			echo "<td><a href=# id='transactionID'>$CId</a></td>";
 			echo "<td>$fname</td>";
 			echo "<td>$lname</td>";
 			echo "<td>$email</td>";
@@ -36,7 +36,7 @@
 			echo "</tr>";
 		}else{
 			echo "<tr class='alternateRow'>";
-			echo "<td>$CId</td>";
+			echo "<td><a href=# id='transactionID'>$CId</a></td>";
 			echo "<td>$fname</td>";
 			echo "<td>$lname</td>";
 			echo "<td>$email</td>";

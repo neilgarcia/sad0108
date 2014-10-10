@@ -44,7 +44,7 @@
 			}
 			echo "</tr>";
 		}else{
-			echo "<tr class='normalRow'>";
+			echo "<tr class='alternateRow'>";
 			echo "<td>" . $res['customer_id'] . "</td>";
 			echo "<td>" . $res['order_id'] . "</td>";
 			echo "<td>" . $res['order_date'] . "</td>";
